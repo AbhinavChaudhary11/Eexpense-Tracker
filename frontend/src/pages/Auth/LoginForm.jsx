@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import AuthLayout from "../../components/Layouts/AuthLayout";
+import AuthLayout from "../../components/Layouts_t/AuthLayout";
 import { Link, useNavigate } from "react-router-dom";
-import Input from "../../components/Inputs/Input";
+import Input from "../../components/Inputs_t/Input";
 import { validateEmail } from "../../utils/helper";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../context_t/UserContext";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
