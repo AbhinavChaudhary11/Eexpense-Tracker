@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Navbar from "./Navbar";
 import SideMenu from "./SideMenu";
-import { UserContext } from "../../context_t/UserContext";
+import { UserContext } from "../../context/UserContext";
 
 gsap.registerPlugin(gsap.BezierPlugin);
 
