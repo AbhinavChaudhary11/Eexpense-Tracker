@@ -15,6 +15,13 @@ const LoginForm = () => {
   const { updateUser } = useContext(UserContext);
   const navigate = useNavigate();
 
+  // ✅ Wake up backend when component loads (important for Render hosting)
+  useEffect(() => {
+    fetch("https://expense-tracker-1hs8.onrender.com")
+      .then(() => console.log("✅ Backend is awake"))
+      .catch((err) => console.error("⚠️ Failed to ping backend:", err));
+  }, []);
+
   // Handle Login Form Submit
   const handleLogin = async (e) => {
     e.preventDefault();
